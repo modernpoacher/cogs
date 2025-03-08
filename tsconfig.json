@@ -16,6 +16,7 @@
     "stories/**/*"
   ],
   "exclude": [
-    "**/__tests__/**/*"
+    "**/__tests__/**/*",
+    ".storybook/**/*"
   ]
 }
