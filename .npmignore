@@ -8,6 +8,7 @@
 .eslintignore
 .eslintrc
 
+.gitignore
 .gitattributes
 
 .depsrc
@@ -18,9 +19,8 @@
 # User-defined NVM configuration
 .nvmrc
 
-# Build
-build
-gulpfile.mjs
+# Mocha
+test
 
 # Jest
 __tests__
@@ -35,7 +35,10 @@ stories
 
 # Shell
 nvm.sh
-transform.sh
 
 # Webpack
 webpack.config.mjs
+
+# TypeScript
+tsconfig.json
+jsconfig.json

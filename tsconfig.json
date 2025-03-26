@@ -1,21 +1,61 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
+    "module": "NodeNext",
     "target": "ESNext",
     "allowJs": true,
-    "checkJs": false,
+    "checkJs": true,
     "noEmit": true,
     "strict": true,
-    "allowSyntheticDefaultImports": true,
-    "isolatedModules": true,
-    "baseUrl": "."
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "#cogs": [
+        "src/js/index.cjs",
+        "src/js/index.mjs"
+      ],
+      "#cogs/cogs": [
+        "src/js/cogs/index.cjs"
+      ],
+      "#cogs/cogs/*": [
+        "src/js/cogs/*/index.cjs"
+      ],
+      "#cogs/components": [
+        "src/js/components/index.cjs",
+        "src/js/components/index.mjs"
+      ],
+      "#cogs/components/*": [
+        "src/js/components/*/index.cjs"
+      ],
+      "#cogs/super": [
+        "src/js/super/index.cjs",
+        "src/js/super/index.mjs"
+      ],
+      "#cogs/super/cogs": [
+        "src/js/super/cogs/index.cjs"
+      ],
+      "#cogs/super/cogs/*": [
+        "src/js/super/cogs/*/index.cjs"
+      ],
+      "#cogs/super/components": [
+        "src/js/super/components/index.cjs",
+        "src/js/super/components/index.mjs"
+      ],
+      "#cogs/super/components/*": [
+        "src/js/super/components/*/index.cjs"
+      ],
+      "#cogs/transformers": [
+        "src/js/transformers/index.mjs"
+      ],
+      "#cogs/transformers/*": [
+        "src/js/transformers/*/index.mjs"
+      ]
+    }
   },
   "include": [
-    ".",
-    "src/**/*",
-    "stories/**/*"
+    "."
   ],
   "exclude": [
+    ".storybook/**/*",
     "**/__tests__/**/*"
   ]
 }
