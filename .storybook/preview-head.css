@@ -318,6 +318,19 @@ main {
   margin: 0 auto;
 }
 
+#storybook-root > header.alpha,
+#storybook-root > header.omega,
+#storybook-root > header.embark,
+#storybook-root > header.debark,
+#storybook-root > header.confirm,
+#storybook-root > div.alpha,
+#storybook-root > div.omega,
+#storybook-root > div.embark,
+#storybook-root > div.debark,
+#storybook-root > div.confirm {
+  padding: 0 1rem;
+}
+
 #storybook-root header h1 {
   font-family: proxima-nova-bold, sans-serif;
   font-weight: 700;
@@ -477,6 +490,867 @@ main {
   outline-offset: 0;
   box-shadow: inset 0 0 0 2px;
   border-color: #000;
+}
+
+#storybook-root .gremlin {
+  padding: 0;
+  margin: 1rem 0;
+  line-height: 1.375rem;
+}
+
+#storybook-root .gremlin:first-child {
+  margin-top: 0;
+}
+
+#storybook-root .gremlin:last-child {
+  margin-bottom: 0;
+}
+
+#storybook-root .gremlin.radio {
+  position: relative;
+  margin-bottom: 0.5rem;
+  min-height: 2rem;
+}
+
+#storybook-root .gremlin.radio:last-of-type {
+  margin-bottom: 0;
+}
+
+#storybook-root .gremlin.radio label:before {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  height: 32px;
+  top: 0;
+  width: 32px;
+  overflow: hidden;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  content: "​";
+  background-color: #fff;
+}
+
+#storybook-root .gremlin.radio input {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+#storybook-root .gremlin.radio input:focus + label:before {
+  box-shadow: 0 0 0 2px #fd0;
+}
+
+#storybook-root .gremlin.radio input:checked + label:after {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  overflow: hidden;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  content: "​";
+  background-color: #000;
+}
+
+#storybook-root .gremlin.radio input + label {
+  margin: 0;
+  padding: 0;
+}
+
+#storybook-root .gremlin.radio.disabled input + label::before,
+#storybook-root .gremlin.radio.disabled input + label::after {
+  border-color: #737d82;
+}
+
+#storybook-root .gremlin.radio.disabled input:checked + label::before,
+#storybook-root .gremlin.radio.disabled input:checked + label::after {
+  border-color: #737d82;
+}
+
+#storybook-root .gremlin.radio.disabled input:checked + label::after {
+  background-color: #737d82;
+}
+
+#storybook-root .gremlin.checkbox {
+  position: relative;
+  margin-bottom: 0.5rem;
+  min-height: 2rem;
+}
+
+#storybook-root .gremlin.checkbox:last-of-type {
+  margin-bottom: 0;
+}
+
+#storybook-root .gremlin.checkbox label:before {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  height: 2rem;
+  top: 0;
+  width: 2rem;
+  overflow: hidden;
+  border: 2px solid currentColor;
+  content: "​";
+  background-color: #fff;
+}
+
+#storybook-root .gremlin.checkbox input {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+#storybook-root .gremlin.checkbox input:focus + label:before {
+  box-shadow: 0 0 0 2px #fd0;
+}
+
+#storybook-root .gremlin.checkbox input:checked + label:after {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0.625rem;
+  bottom: 0.625rem;
+  left: 0.3125rem;
+  width: 1.375rem;
+  height: 0.625rem;
+  overflow: hidden;
+  border-bottom: 4px solid currentColor;
+  border-left: 4px solid currentColor;
+  content: "​";
+  background-color: #fff;
+  transform: rotate(-45deg);
+}
+
+#storybook-root .gremlin.checkbox input + label {
+  margin: 0;
+  padding: 0;
+}
+
+#storybook-root .gremlin.checkbox.disabled input:checked + label::before {
+  border-color: #737d82;
+}
+
+#storybook-root .gremlin.checkbox.disabled input:checked + label::after {
+  border-left-color: #737d82;
+  border-bottom-color: #737d82;
+}
+
+#storybook-root .gremlin.checkbox.disabled input + label::before {
+  border-color: #737d82;
+}
+
+#storybook-root
+  .gremlin.disabled
+  input:not([type="checkbox"]):not([type="radio"]),
+#storybook-root .gremlin.disabled select,
+#storybook-root .gremlin.disabled textarea {
+  border-color: #737d82;
+  color: #737d82;
+}
+
+#storybook-root .gremlin.error {
+  border-left: 0.25rem solid #a00;
+  padding: 0 1rem;
+}
+
+#storybook-root .gremlin.error input:not([type="checkbox"]):not([type="radio"]),
+#storybook-root .gremlin.error select,
+#storybook-root .gremlin.error textarea {
+  border: 2px solid #a00;
+}
+
+#storybook-root
+  .gremlin.error
+  input:not([type="checkbox"]):not([type="radio"]):focus,
+#storybook-root .gremlin.error select:focus,
+#storybook-root .gremlin.error textarea:focus {
+  border-color: #000;
+}
+
+#storybook-root .gremlin.error.radio,
+#storybook-root .gremlin.error.checkbox {
+  padding-left: 4rem;
+}
+
+#storybook-root .gremlin.error.radio input,
+#storybook-root .gremlin.error.checkbox input {
+  left: 1.5rem;
+}
+
+#storybook-root .gremlin.error.radio label:before,
+#storybook-root .gremlin.error.checkbox label:before {
+  left: 1rem;
+  border: 2px solid #a00;
+}
+
+#storybook-root .gremlin.error.radio input:checked + label:after {
+  left: 1.5rem;
+}
+
+#storybook-root .gremlin.error.checkbox input:checked + label:after {
+  left: 1.3125rem;
+}
+
+#storybook-root .gremlin.fieldset legend {
+  font-family: proxima-nova-bold, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #171819;
+  font-size: 1.625rem;
+  line-height: 2.125rem;
+}
+
+@media only screen and (max-width: 767px) {
+  #storybook-root .gremlin.fieldset legend {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+#storybook-root .gremlin.fieldset legend {
+  padding: 0;
+  margin-top: 0;
+}
+
+#storybook-root .gremlin.fieldset.error {
+  border-left: 0.25rem solid #a00;
+  padding: 0 1rem;
+  padding-left: 1rem;
+}
+
+#storybook-root
+  .gremlin.fieldset.error
+  input:not([type="checkbox"]):not([type="radio"]),
+#storybook-root .gremlin.fieldset.error select,
+#storybook-root .gremlin.fieldset.error textarea {
+  border: 2px solid #a00;
+}
+
+#storybook-root
+  .gremlin.fieldset.error
+  input:not([type="checkbox"]):not([type="radio"]):focus,
+#storybook-root .gremlin.fieldset.error select:focus,
+#storybook-root .gremlin.fieldset.error textarea:focus {
+  border-color: #000;
+}
+
+#storybook-root .gremlin.fieldset.error.radio,
+#storybook-root .gremlin.fieldset.error.checkbox {
+  padding-left: 4rem;
+}
+
+#storybook-root .gremlin.fieldset.error.radio input,
+#storybook-root .gremlin.fieldset.error.checkbox input {
+  left: 1.5rem;
+}
+
+#storybook-root .gremlin.fieldset.error.radio label:before,
+#storybook-root .gremlin.fieldset.error.checkbox label:before {
+  left: 1rem;
+  border: 2px solid #a00;
+}
+
+#storybook-root .gremlin.fieldset.error.radio input:checked + label:after {
+  left: 1.5rem;
+}
+
+#storybook-root .gremlin.fieldset.error.checkbox input:checked + label:after {
+  left: 1.3125rem;
+}
+
+#storybook-root .sprocket {
+  padding: 0;
+  margin: 1rem 0;
+  line-height: 1.375rem;
+}
+
+#storybook-root .sprocket:first-child {
+  margin-top: 0;
+}
+
+#storybook-root .sprocket:last-child {
+  margin-bottom: 0;
+}
+
+#storybook-root .sprocket.error-summary {
+  background-color: #fff;
+  border: 0.25rem solid #a00;
+  display: block;
+  padding: 1rem;
+  line-height: 2rem;
+}
+
+#storybook-root .sprocket.error-summary > h2:first-child {
+  margin-top: 0;
+}
+
+#storybook-root .sprocket.error-summary ul {
+  margin-bottom: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#storybook-root .sprocket.error-summary li {
+  font-family: proxima-nova-regular, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #171819;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media only screen and (max-width: 767px) {
+  #storybook-root .sprocket.error-summary li {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+#storybook-root .sprocket.error-summary li {
+  color: #a00;
+}
+
+#storybook-root .sprocket.error-summary li {
+  display: block;
+  padding: 0;
+  margin: 0 0 0.25rem 0;
+}
+
+#storybook-root .sprocket.error-summary a {
+  font-family: proxima-nova-regular, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #171819;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media only screen and (max-width: 767px) {
+  #storybook-root .sprocket.error-summary a {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+#storybook-root .sprocket.error-summary a {
+  color: #a00;
+}
+
+#storybook-root .sprocket.error-summary a:focus {
+  outline: 3px solid rgba(0, 0, 0, 0);
+  text-decoration: none;
+  outline-offset: 0;
+  box-shadow:
+    0 -2px #fd0,
+    0 4px #000;
+  color: #171819;
+  background-color: #fd0;
+}
+
+#storybook-root .sprocket.error-summary:focus {
+  outline: 3px solid #fd0;
+  outline-offset: 0;
+  border-color: #000;
+}
+
+#storybook-root .sprocket.check-answers > h2:first-child {
+  margin-top: 0;
+}
+
+#storybook-root .sprocket.check-answers dl {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+#storybook-root .sprocket.check-answers dl .answer {
+  display: table-row;
+}
+
+#storybook-root .sprocket.check-answers dl dt,
+#storybook-root .sprocket.check-answers dl dd {
+  display: table-cell;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid #dcdcdc;
+}
+
+#storybook-root .sprocket.check-answers dl .answer-title {
+  font-family: proxima-nova-bold, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #171819;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media only screen and (max-width: 767px) {
+  #storybook-root .sprocket.check-answers dl .answer-title {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+#storybook-root .sprocket.check-answers dl .answer-title {
+  width: 30%;
+  padding-right: 1rem;
+}
+
+#storybook-root .sprocket.check-answers dl .answer-value {
+  width: 50%;
+}
+
+#storybook-root .sprocket.check-answers dl .change-answer {
+  width: 20%;
+  padding-left: 1rem;
+  text-align: right;
+}
+
+#storybook-root
+  .sprocket.check-answers
+  dl
+  .change-answer
+  .visually-hidden-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+#storybook-root .sprocket.fieldset legend {
+  font-family: proxima-nova-bold, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #171819;
+  font-size: 1.625rem;
+  line-height: 2.125rem;
+}
+
+@media only screen and (max-width: 767px) {
+  #storybook-root .sprocket.fieldset legend {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+#storybook-root .sprocket.fieldset legend {
+  padding: 0;
+  margin-top: 0;
+}
+
+#storybook-root .sprocket.fieldset.error {
+  border-left: 0.25rem solid #a00;
+  padding-left: 1rem;
+}
+
+#storybook-root
+  .sprocket.fieldset.error
+  input:not([type="checkbox"]):not([type="radio"]),
+#storybook-root .sprocket.fieldset.error select,
+#storybook-root .sprocket.fieldset.error textarea {
+  border: 2px solid #a00;
+}
+
+#storybook-root
+  .sprocket.fieldset.error
+  input:not([type="checkbox"]):not([type="radio"]):focus,
+#storybook-root .sprocket.fieldset.error select:focus,
+#storybook-root .sprocket.fieldset.error textarea:focus {
+  border-color: #000;
+}
+
+#storybook-root .sprocket.fieldset.error.radio,
+#storybook-root .sprocket.fieldset.error.checkbox {
+  padding-left: 4rem;
+}
+
+#storybook-root .sprocket.fieldset.error.radio input,
+#storybook-root .sprocket.fieldset.error.checkbox input {
+  left: 1.5rem;
+}
+
+#storybook-root .sprocket.fieldset.error.radio label:before,
+#storybook-root .sprocket.fieldset.error.checkbox label:before {
+  left: 1rem;
+  border: 2px solid #a00;
+}
+
+#storybook-root .sprocket.fieldset.error.radio input:checked + label:after {
+  left: 1.5rem;
+}
+
+#storybook-root .sprocket.fieldset.error.checkbox input:checked + label:after {
+  left: 1.3125rem;
+}
+
+#storybook-root .sprocket.fieldset .description {
+  font-family: proxima-nova-regular, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #171819;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media only screen and (max-width: 767px) {
+  #storybook-root .sprocket.fieldset .description {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+#storybook-root .sprocket.fieldset .description {
+  color: #626a6e;
+}
+
+#storybook-root .sprocket.fieldset .description {
+  display: block;
+  padding: 0;
+  margin: 0 0 0.25rem 0;
+}
+
+#storybook-root .sprocket.fieldset .error-message {
+  font-family: proxima-nova-regular, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #171819;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media only screen and (max-width: 767px) {
+  #storybook-root .sprocket.fieldset .error-message {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+#storybook-root .sprocket.fieldset .error-message {
+  color: #a00;
+}
+
+#storybook-root .sprocket.fieldset .error-message {
+  display: block;
+  padding: 0;
+  margin: 0 0 0.25rem 0;
+}
+
+#storybook-root .sprocket .sprocket {
+  margin-bottom: 0;
+}
+
+#storybook-root .cog {
+  padding: 0;
+  margin: 1rem 0;
+  line-height: 1.375rem;
+}
+
+#storybook-root .cog:first-child {
+  margin-top: 0;
+}
+
+#storybook-root .cog:last-child {
+  margin-bottom: 0;
+}
+
+#storybook-root .cog.radio {
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 0.5rem;
+  min-height: 2rem;
+}
+
+#storybook-root .cog.radio:last-of-type {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  #storybook-root .cog.radio label {
+    padding-top: 0.375rem;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  #storybook-root .cog.radio label {
+    padding-top: 0.375rem;
+  }
+}
+
+@media only screen and (max-width: 319px) {
+  #storybook-root .cog.radio label {
+    padding-top: 0.375rem;
+  }
+}
+
+#storybook-root .cog.radio label:before {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  height: 32px;
+  top: 0;
+  width: 32px;
+  overflow: hidden;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  content: "​";
+  background-color: #fff;
+}
+
+#storybook-root .cog.radio input {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+#storybook-root .cog.radio input:focus + label:before {
+  box-shadow: 0 0 0 2px #fd0;
+}
+
+#storybook-root .cog.radio input:checked + label:after {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  overflow: hidden;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  content: "​";
+  background-color: #000;
+}
+
+#storybook-root .cog.radio.disabled input + label::before,
+#storybook-root .cog.radio.disabled input + label::after {
+  border-color: #737d82;
+}
+
+#storybook-root .cog.radio.disabled input:checked + label::before,
+#storybook-root .cog.radio.disabled input:checked + label::after {
+  border-color: #737d82;
+}
+
+#storybook-root .cog.radio.disabled input:checked + label::after {
+  background-color: #737d82;
+}
+
+#storybook-root .cog.checkbox {
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 0.5rem;
+  min-height: 2rem;
+}
+
+#storybook-root .cog.checkbox:last-of-type {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  #storybook-root .cog.checkbox label {
+    padding-top: 0.375rem;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  #storybook-root .cog.checkbox label {
+    padding-top: 0.375rem;
+  }
+}
+
+@media only screen and (max-width: 319px) {
+  #storybook-root .cog.checkbox label {
+    padding-top: 0.375rem;
+  }
+}
+
+#storybook-root .cog.checkbox label:before {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  height: 2rem;
+  top: 0;
+  width: 2rem;
+  overflow: hidden;
+  border: 2px solid currentColor;
+  content: "​";
+  background-color: #fff;
+}
+
+#storybook-root .cog.checkbox input {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+#storybook-root .cog.checkbox input:focus + label:before {
+  box-shadow: 0 0 0 2px #fd0;
+}
+
+#storybook-root .cog.checkbox input:checked + label:after {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0.625rem;
+  bottom: 0.625rem;
+  left: 0.3125rem;
+  width: 1.375rem;
+  height: 0.625rem;
+  overflow: hidden;
+  border-bottom: 4px solid currentColor;
+  border-left: 4px solid currentColor;
+  content: "​";
+  background-color: #fff;
+  transform: rotate(-45deg);
+}
+
+#storybook-root .cog.checkbox.disabled input:checked + label::before {
+  border-color: #737d82;
+}
+
+#storybook-root .cog.checkbox.disabled input:checked + label::after {
+  border-left-color: #737d82;
+  border-bottom-color: #737d82;
+}
+
+#storybook-root .cog.checkbox.disabled input + label::before {
+  border-color: #737d82;
+}
+
+#storybook-root .cog.disabled input:not([type="checkbox"]):not([type="radio"]),
+#storybook-root .cog.disabled select,
+#storybook-root .cog.disabled textarea {
+  border-color: #737d82;
+  color: #737d82;
+}
+
+#storybook-root .cog.error {
+  border-left: 0.25rem solid #a00;
+  padding: 0 1rem;
+}
+
+#storybook-root .cog.error input:not([type="checkbox"]):not([type="radio"]),
+#storybook-root .cog.error select,
+#storybook-root .cog.error textarea {
+  border: 2px solid #a00;
+}
+
+#storybook-root
+  .cog.error
+  input:not([type="checkbox"]):not([type="radio"]):focus,
+#storybook-root .cog.error select:focus,
+#storybook-root .cog.error textarea:focus {
+  border-color: #000;
+}
+
+#storybook-root .cog.error.radio,
+#storybook-root .cog.error.checkbox {
+  padding-left: 4rem;
+}
+
+#storybook-root .cog.error.radio input,
+#storybook-root .cog.error.checkbox input {
+  left: 1.5rem;
+}
+
+#storybook-root .cog.error.radio label:before,
+#storybook-root .cog.error.checkbox label:before {
+  left: 1rem;
+  border: 2px solid #a00;
+}
+
+#storybook-root .cog.error.radio input:checked + label:after {
+  left: 1.5rem;
+}
+
+#storybook-root .cog.error.checkbox input:checked + label:after {
+  left: 1.3125rem;
+}
+
+#storybook-root .cog .description {
+  font-family: proxima-nova-regular, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #171819;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media only screen and (max-width: 767px) {
+  #storybook-root .cog .description {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+#storybook-root .cog .description {
+  color: #626a6e;
+}
+
+#storybook-root .cog .description {
+  display: block;
+  padding: 0;
+  margin: 0 0 0.25rem 0;
+}
+
+#storybook-root .cog .error-message {
+  font-family: proxima-nova-regular, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #171819;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media only screen and (max-width: 767px) {
+  #storybook-root .cog .error-message {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+#storybook-root .cog .error-message {
+  color: #a00;
+}
+
+#storybook-root .cog .error-message {
+  display: block;
+  padding: 0;
+  margin: 0 0 0.25rem 0;
+}
+
+#storybook-root .sprocket .cog:last-of-type {
+  margin-bottom: 0;
+}
+
+#storybook-root > .sprocket.fieldset > fieldset > legend {
+  font-family: proxima-nova-bold, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #171819;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+  #storybook-root > .sprocket.fieldset > fieldset > legend {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+#storybook-root > .sprocket.fieldset > fieldset > legend {
+  padding: 0;
+  margin: 0 0 1em 0;
 }
 
 #storybook-root {
