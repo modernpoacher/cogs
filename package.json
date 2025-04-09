@@ -57,7 +57,7 @@
     "@babel/register": "^7.25.9",
     "@modernpoacher/design-system": "2.0.3",
     "@sequencemedia/eslint-config-standard": "^0.2.48",
-    "@sequencemedia/eslint-config-typescript": "^0.1.72",
+    "@sequencemedia/eslint-config-typescript": "^0.1.73",
     "@storybook/addon-actions": "^8.6.12",
     "@storybook/addon-essentials": "^8.6.12",
     "@storybook/addon-links": "^8.6.12",
@@ -102,8 +102,8 @@
     "prettier": "^3.5.3",
     "prop-types": "^15.8.1",
     "react": "^19.1.0",
-    "react-component-instance": "^0.0.23",
-    "react-component-snapshot": "^0.0.26",
+    "react-component-instance": "^0.0.24",
+    "react-component-snapshot": "^0.0.27",
     "react-dom": "^19.1.0",
     "remove-files-webpack-plugin": "^1.5.0",
     "sass": "^1.86.3",
@@ -112,7 +112,7 @@
     "stylelint": "^16.18.0",
     "stylelint-config-recommended-scss": "^14.1.0",
     "stylelint-scss": "^6.11.1",
-    "webpack": "^5.99.1",
+    "webpack": "^5.99.5",
     "webpack-cli": "^6.0.1"
   },
   "imports": {
