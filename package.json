@@ -110,6 +110,9 @@
     "webpack": "^5.99.9",
     "webpack-cli": "^6.0.1"
   },
+  "overrides": {
+    "storybook": "$storybook"
+  },
   "imports": {
     "#cogs": {
       "require": "./src/js/index.cjs",
@@ -160,8 +163,5 @@
       "import": "./src/js/super/components/index.mjs"
     },
     "./super/components/*": "./src/js/super/components/*/index.cjs"
-  },
-  "overrides": {
-    "storybook": "$storybook"
   }
 }
