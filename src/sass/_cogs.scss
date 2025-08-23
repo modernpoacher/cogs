@@ -10,36 +10,36 @@
   padding: 0;
   margin: 1rem 0;
 
-  &:first-child {
+  &:first-child /* stylelint-disable-line nesting-selector-no-missing-scoping-root */ {
     margin-top: 0;
   }
 
-  &:last-child {
+  &:last-child /* stylelint-disable-line nesting-selector-no-missing-scoping-root */ {
     margin-bottom: 0;
   }
 
   line-height: 1.375rem;
 
-  &.radio {
+  &.radio /* stylelint-disable-line nesting-selector-no-missing-scoping-root */ {
     @include radio.cog-radio;
   }
 
-  &.checkbox {
+  &.checkbox /* stylelint-disable-line nesting-selector-no-missing-scoping-root */ {
     @include checkbox.cog-checkbox;
   }
 
-  &.disabled {
+  &.disabled /* stylelint-disable-line nesting-selector-no-missing-scoping-root */ {
     @include disabled.cog-disabled;
   }
 
-  &.error {
+  &.error /* stylelint-disable-line nesting-selector-no-missing-scoping-root */ {
     @include error.cog-error;
   }
 
   .description {
     @include typography.secondary-text;
 
-    & /* stylelint-disable-line no-duplicate-selectors */ {
+    & /* stylelint-disable-line no-duplicate-selectors, nesting-selector-no-missing-scoping-root */ {
       display: block;
       padding: 0;
       margin: 0 0 0.25rem 0;
@@ -49,7 +49,7 @@
   .error-message {
     @include typography.error-standard;
 
-    & /* stylelint-disable-line no-duplicate-selectors */ {
+    & /* stylelint-disable-line no-duplicate-selectors, nesting-selector-no-missing-scoping-root */ {
       display: block;
       padding: 0;
       margin: 0 0 0.25rem 0;
