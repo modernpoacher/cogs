@@ -46,9 +46,6 @@ import type {
   TextareaProps
 } from '#cogs/cogs/textarea'
 
-export type ErrorDefinitionType = CogsTypes.ErrorDefinitionType
-export type FieldErrorType = CogsTypes.FieldErrorType
-
 export { default as CheckboxCog } from '#cogs/cogs/checkbox'
 export { default as EmailCog } from '#cogs/cogs/email'
 export { default as NumberCog } from '#cogs/cogs/number'

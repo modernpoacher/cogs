@@ -7,11 +7,6 @@ declare global {
       checked?: boolean
     ) => void
 
-    export interface FieldErrorType {
-      text: string
-      href: string
-    }
-
     export namespace Super {
       export namespace Cogs {
         export interface CogProps {

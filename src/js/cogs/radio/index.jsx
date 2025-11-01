@@ -36,7 +36,6 @@ export default class Radio extends CheckCog {
   }
 
   /**
-   *  @param {string} name
    *  @param {string | string[]} [value]
    *  @param {boolean} [checked]
    */
@@ -49,7 +48,6 @@ export default class Radio extends CheckCog {
   }
 
   /**
-   *  @param {string} name
    *  @param {string | string[]} [value]
    *  @param {boolean} [checked]
    */
